@@ -11,7 +11,7 @@ class Contact extends Section {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
     };
     this.errors = {};
   }
@@ -35,7 +35,7 @@ class Contact extends Section {
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1">Email</h4>
-                  <p class="text-gray-600 dark:text-slate-400">emiliano@example.com</p>
+                  <p class="text-gray-600 dark:text-slate-400">emiliano.huerta@email.com</p>
                 </div>
               </div>
               
@@ -47,7 +47,7 @@ class Contact extends Section {
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1">Teléfono</h4>
-                  <p class="text-gray-600 dark:text-slate-400">+1 (555) 123-4567</p>
+                  <p class="text-gray-600 dark:text-slate-400">+52 55 1234 5678</p>
                 </div>
               </div>
               
@@ -60,7 +60,7 @@ class Contact extends Section {
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-1">Ubicación</h4>
-                  <p class="text-gray-600 dark:text-slate-400">Ciudad, País</p>
+                  <p class="text-gray-600 dark:text-slate-400">Ciudad de México, México</p>
                 </div>
               </div>
             </div>
@@ -188,11 +188,11 @@ class Contact extends Section {
 
     // Real-time validation
     const inputs = this.container.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
       input.addEventListener('blur', () => {
         this.validateField(input);
       });
-      
+
       input.addEventListener('input', () => {
         this.clearFieldError(input);
       });
@@ -202,13 +202,13 @@ class Contact extends Section {
   handleSubmit() {
     const form = this.container.querySelector('#contact-form');
     const formData = new FormData(form);
-    
+
     // Get form data
     this.formData = {
       name: formData.get('name'),
       email: formData.get('email'),
       subject: formData.get('subject'),
-      message: formData.get('message')
+      message: formData.get('message'),
     };
 
     // Validate form
@@ -248,7 +248,7 @@ class Contact extends Section {
 
     // Display errors
     this.displayErrors();
-    
+
     return isValid;
   }
 
@@ -263,7 +263,10 @@ class Contact extends Section {
     switch (fieldName) {
       case 'name':
         if (value.length < 2) {
-          this.showFieldError(field, 'El nombre debe tener al menos 2 caracteres');
+          this.showFieldError(
+            field,
+            'El nombre debe tener al menos 2 caracteres'
+          );
         }
         break;
       case 'email':
@@ -274,12 +277,18 @@ class Contact extends Section {
         break;
       case 'subject':
         if (value.length < 5) {
-          this.showFieldError(field, 'El asunto debe tener al menos 5 caracteres');
+          this.showFieldError(
+            field,
+            'El asunto debe tener al menos 5 caracteres'
+          );
         }
         break;
       case 'message':
         if (value.length < 10) {
-          this.showFieldError(field, 'El mensaje debe tener al menos 10 caracteres');
+          this.showFieldError(
+            field,
+            'El mensaje debe tener al menos 10 caracteres'
+          );
         }
         break;
     }
@@ -300,15 +309,19 @@ class Contact extends Section {
       errorElement.classList.add('hidden');
     }
     field.classList.remove('border-red-500', 'focus:ring-red-500');
-    field.classList.add('border-gray-300', 'dark:border-slate-600', 'focus:ring-cyan-blue');
+    field.classList.add(
+      'border-gray-300',
+      'dark:border-slate-600',
+      'focus:ring-cyan-blue'
+    );
   }
 
   displayErrors() {
     // Clear all errors first
-    Object.keys(this.errors).forEach(fieldName => {
+    Object.keys(this.errors).forEach((fieldName) => {
       const field = this.container.querySelector(`[name="${fieldName}"]`);
       const errorElement = this.container.querySelector(`#${fieldName}-error`);
-      
+
       if (field && errorElement) {
         if (this.errors[fieldName]) {
           errorElement.textContent = this.errors[fieldName];
@@ -336,16 +349,15 @@ class Contact extends Section {
     try {
       // Simulate API call (replace with actual endpoint)
       await this.sendEmail();
-      
+
       // Show success message
       successMessage.classList.remove('hidden');
       this.container.querySelector('#contact-form').reset();
-      
+
       // Hide success message after 5 seconds
       setTimeout(() => {
         successMessage.classList.add('hidden');
       }, 5000);
-      
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo.');
@@ -363,7 +375,7 @@ class Contact extends Section {
     // 1. Send data to your backend API
     // 2. Use a service like EmailJS, Formspree, or Netlify Forms
     // 3. Or integrate with your email service provider
-    
+
     return new Promise((resolve) => {
       // Simulate API delay
       setTimeout(() => {

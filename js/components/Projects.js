@@ -18,7 +18,8 @@ class Projects extends Section {
         title: 'E-Commerce Platform',
         description:
           'Plataforma de comercio electrónico completa con carrito de compras, pagos integrados y panel de administración.',
-        image: 'assets/images/projects/ecommerce.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMDZiNmQ0Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+RUNvbW1lcmNlIFBsYXRmb3JtPC90ZXh0Pgo8L3N2Zz4K',
         technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
         liveUrl: 'https://ecommerce-demo.com',
         githubUrl: 'https://github.com/emilianohuerta/ecommerce',
@@ -29,7 +30,8 @@ class Projects extends Section {
         title: 'Task Management App',
         description:
           'Aplicación de gestión de tareas con colaboración en tiempo real, notificaciones y análisis de productividad.',
-        image: 'assets/images/projects/taskmanager.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMTBiOTgxIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+VGFzayBNYW5hZ2VtZW50PC90ZXh0Pgo8L3N2Zz4K',
         technologies: ['Vue.js', 'Express', 'MongoDB', 'Socket.io'],
         liveUrl: 'https://taskmanager-demo.com',
         githubUrl: 'https://github.com/emilianohuerta/taskmanager',
@@ -40,7 +42,8 @@ class Projects extends Section {
         title: 'Weather Dashboard',
         description:
           'Dashboard meteorológico con visualización de datos en tiempo real, mapas interactivos y pronósticos extendidos.',
-        image: 'assets/images/projects/weather.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZjU5ZTBiIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+V2VhdGhlciBEYXNoYm9hcmQ8L3RleHQ+Cjwvc3ZnPgo=',
         technologies: ['JavaScript', 'Chart.js', 'OpenWeather API', 'CSS3'],
         liveUrl: 'https://weather-demo.com',
         githubUrl: 'https://github.com/emilianohuerta/weather',
@@ -51,7 +54,8 @@ class Projects extends Section {
         title: 'Mobile Banking App',
         description:
           'Aplicación móvil de banca con autenticación biométrica, transferencias seguras y gestión de inversiones.',
-        image: 'assets/images/projects/banking.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjZWY0NDQ0Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+TW9iaWxlIEJhbmtpbmc8L3RleHQ+Cjwvc3ZnPgo=',
         technologies: ['React Native', 'Node.js', 'PostgreSQL', 'JWT'],
         liveUrl: null,
         githubUrl: 'https://github.com/emilianohuerta/banking',
@@ -62,7 +66,8 @@ class Projects extends Section {
         title: 'AI Chatbot',
         description:
           'Chatbot inteligente con procesamiento de lenguaje natural, integración con APIs y aprendizaje automático.',
-        image: 'assets/images/projects/chatbot.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjOGI1Y2Y2Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+QUkgQ2hhdGJvdDwvdGV4dD4KPC9zdmc+Cg==',
         technologies: ['Python', 'TensorFlow', 'Flask', 'OpenAI API'],
         liveUrl: 'https://chatbot-demo.com',
         githubUrl: 'https://github.com/emilianohuerta/chatbot',
@@ -73,7 +78,8 @@ class Projects extends Section {
         title: 'Portfolio Website',
         description:
           'Sitio web personal responsivo con diseño minimalista, modo oscuro y optimización SEO.',
-        image: 'assets/images/projects/portfolio.jpg',
+        image:
+          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMDZiNmQ0Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+UG9ydGZvbGlvIFdlYnNpdGU8L3RleHQ+Cjwvc3ZnPgo=',
         technologies: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
         liveUrl: 'https://emilianohuerta.dev',
         githubUrl: 'https://github.com/emilianohuerta/portfolio',

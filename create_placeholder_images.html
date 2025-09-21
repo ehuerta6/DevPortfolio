@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Imágenes Placeholder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .placeholder {
+        margin: 20px 0;
+        text-align: center;
+      }
+      .placeholder img {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        margin: 10px;
+      }
+      .download-btn {
+        background: #1e3a8a;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .download-btn:hover {
+        background: #06b6d4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generador de Imágenes Placeholder para Portfolio</h1>
+      <p>Esta página genera imágenes placeholder para testing del portfolio.</p>
+
+      <div class="placeholder">
+        <h3>Imagen de Perfil (300x300)</h3>
+        <canvas id="profile" width="300" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('profile', 'headshot.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 1 (400x300)</h3>
+        <canvas id="project1" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project1', 'ecommerce.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 2 (400x300)</h3>
+        <canvas id="project2" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project2', 'taskmanager.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 3 (400x300)</h3>
+        <canvas id="project3" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project3', 'weather.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 4 (400x300)</h3>
+        <canvas id="project4" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project4', 'ai-chatbot.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 5 (400x300)</h3>
+        <canvas id="project5" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project5', 'mobile-app.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+
+      <div class="placeholder">
+        <h3>Proyecto 6 (400x300)</h3>
+        <canvas id="project6" width="400" height="300"></canvas>
+        <br />
+        <button
+          class="download-btn"
+          onclick="downloadImage('project6', 'data-viz.jpg')"
+        >
+          Descargar
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function createPlaceholder(
+        canvasId,
+        width,
+        height,
+        text,
+        bgColor,
+        textColor
+      ) {
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext('2d');
+
+        // Background
+        ctx.fillStyle = bgColor;
+        ctx.fillRect(0, 0, width, height);
+
+        // Border
+        ctx.strokeStyle = '#ddd';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(1, 1, width - 2, height - 2);
+
+        // Text
+        ctx.fillStyle = textColor;
+        ctx.font = 'bold 24px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(text, width / 2, height / 2);
+
+        // Subtitle
+        ctx.font = '16px Arial';
+        ctx.fillText(`${width}x${height}`, width / 2, height / 2 + 30);
+      }
+
+      function downloadImage(canvasId, filename) {
+        const canvas = document.getElementById(canvasId);
+        const link = document.createElement('a');
+        link.download = filename;
+        link.href = canvas.toDataURL();
+        link.click();
+      }
+
+      // Generate all placeholders
+      createPlaceholder(
+        'profile',
+        300,
+        300,
+        'Emiliano Huerta',
+        '#1e3a8a',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project1',
+        400,
+        300,
+        'E-Commerce Platform',
+        '#06b6d4',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project2',
+        400,
+        300,
+        'Task Management App',
+        '#10b981',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project3',
+        400,
+        300,
+        'Weather Dashboard',
+        '#f59e0b',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project4',
+        400,
+        300,
+        'AI Chatbot',
+        '#8b5cf6',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project5',
+        400,
+        300,
+        'Mobile App',
+        '#ef4444',
+        '#ffffff'
+      );
+      createPlaceholder(
+        'project6',
+        400,
+        300,
+        'Data Visualization',
+        '#06b6d4',
+        '#ffffff'
+      );
+    </script>
+  </body>
+</html>

@@ -32,15 +32,15 @@ const CONFIG = {
   // Personal information (to be customized)
   personal: {
     name: 'Emiliano Huerta',
-    title: 'Desarrollador Full Stack',
-    bio: 'Apasionado desarrollador con experiencia en tecnologías web modernas. Especializado en JavaScript, React, Node.js y arquitecturas escalables.',
-    email: 'emiliano@example.com',
-    phone: '+52 123 456 7890',
+    title: 'Full Stack Developer & Tech Lead',
+    bio: 'Desarrollador Full Stack con más de 5 años de experiencia creando aplicaciones web escalables y liderando equipos de desarrollo. Especializado en JavaScript, React, Node.js, y metodologías ágiles.',
+    email: 'emiliano.huerta@email.com',
+    phone: '+52 55 1234 5678',
     location: 'Ciudad de México, México',
-    website: 'https://emilianohuerta.dev',
-    github: 'https://github.com/emilianohuerta',
-    linkedin: 'https://linkedin.com/in/emilianohuerta',
-    twitter: 'https://twitter.com/emilianohuerta',
+    website: 'https://emiliano-huerta.dev',
+    github: 'https://github.com/emiliano-huerta',
+    linkedin: 'https://linkedin.com/in/emiliano-huerta',
+    twitter: 'https://twitter.com/emiliano_huerta',
   },
 
   // Animation settings

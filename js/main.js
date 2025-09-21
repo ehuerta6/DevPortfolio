@@ -37,15 +37,43 @@ const App = {
     this.components.mobileResponsive = new MobileResponsive();
     this.components.performanceMonitoring = new PerformanceMonitoring();
 
-    // Initialize main components
+    // Initialize header component
     this.components.header = new Header('header');
-    this.components.home = new Home('main');
-    this.components.about = new About('main');
-    this.components.projects = new Projects('main');
-    this.components.experience = new Experience('main');
-    this.components.leadership = new Leadership('main');
-    this.components.education = new Education('main');
-    this.components.contact = new Contact('main');
+
+    // Render all sections into main container
+    this.renderAllSections();
+  },
+
+  /**
+   * Render all sections into the main container
+   */
+  renderAllSections() {
+    const mainContainer = document.getElementById('main');
+    if (!mainContainer) return;
+
+    // Clear the main container
+    mainContainer.innerHTML = '';
+
+    // Initialize and render each section
+    const sections = [
+      { name: 'home', component: Home },
+      { name: 'about', component: About },
+      { name: 'projects', component: Projects },
+      { name: 'experience', component: Experience },
+      { name: 'leadership', component: Leadership },
+      { name: 'education', component: Education },
+      { name: 'contact', component: Contact },
+    ];
+
+    sections.forEach(({ name, component }) => {
+      // Create a temporary container for each section
+      const sectionContainer = document.createElement('div');
+      sectionContainer.id = `${name}-container`;
+      mainContainer.appendChild(sectionContainer);
+
+      // Initialize the component
+      this.components[name] = new component(`${name}-container`);
+    });
   },
 
   /**
@@ -122,7 +150,7 @@ const App = {
 
     // Update navigation active state
     if (this.components.navigation) {
-      this.components.navigation.updateActiveSection();
+      this.components.navigation.updateActiveSectionPublic();
     }
 
     // Handle header sticky behavior

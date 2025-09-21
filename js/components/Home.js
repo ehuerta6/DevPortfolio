@@ -9,9 +9,15 @@ class Home extends Section {
     super(containerId, 'home', '');
   }
 
+  render() {
+    // Override render to not use Section's default structure
+    const content = this.getContent();
+    this.container.innerHTML = content;
+  }
+
   getContent() {
     return `
-      <div class="min-h-screen flex items-center py-20 relative overflow-hidden">
+      <section id="home" class="min-h-screen flex items-center py-20 relative overflow-hidden">
         <!-- Background decorative elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
           <div class="absolute top-20 left-10 w-32 h-32 bg-cyan-blue/10 rounded-full animate-pulse-custom"></div>
@@ -26,7 +32,7 @@ class Home extends Section {
             <div class="order-2 lg:order-1 text-center lg:text-left animate-on-scroll">
               <div class="relative inline-block">
                 <div class="relative">
-                  <img src="assets/images/profile/headshot.jpg" 
+                  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgdmlld0JveD0iMCAwIDMyMCAzMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIiByeD0iMTYwIiBmaWxsPSIjMWUzYThhIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+RW1pbGlhbm8gSHVlcnRhPC90ZXh0Pgo8L3N2Zz4K" 
                        alt="${CONFIG.personal.name}" 
                        class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-gray-200 dark:border-slate-700 hover:border-navy-blue dark:hover:border-cyan-blue transition-all duration-300 hover:scale-105 mx-auto lg:mx-0 hero-image">
                   <!-- Floating decorative elements -->
@@ -112,7 +118,7 @@ class Home extends Section {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     `;
   }
 

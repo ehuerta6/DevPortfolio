@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Portfolio - Emiliano Huerta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'navy-blue': '#1e3a8a',
+              'cyan-blue': '#06b6d4',
+            },
+            fontFamily: {
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-inter bg-white text-gray-900 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <div class="min-h-screen">
+      <h1
+        class="text-4xl font-bold text-center py-8 text-navy-blue dark:text-cyan-blue"
+      >
+        Portfolio Test - Emiliano Huerta
+      </h1>
+
+      <div class="container mx-auto px-6 py-8">
+        <div class="text-center mb-8">
+          <p class="text-lg text-gray-600 dark:text-slate-400">
+            Esta es una página de prueba para verificar que todos los
+            componentes funcionan correctamente.
+          </p>
+          <button
+            onclick="toggleDarkMode()"
+            class="mt-4 px-6 py-2 bg-navy-blue text-white rounded-lg hover:bg-cyan-blue transition-colors duration-200"
+          >
+            Toggle Dark Mode
+          </button>
+        </div>
+
+        <!-- Test Sections -->
+        <div class="space-y-12">
+          <section id="home" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Home Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Home component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="about" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              About Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>About component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="projects" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Projects Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Projects component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="experience" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Experience Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Experience component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="leadership" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Leadership Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Leadership component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="education" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Education Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Education component will be rendered here</p>
+            </div>
+          </section>
+
+          <section id="contact" class="py-8">
+            <h2
+              class="text-2xl font-semibold text-navy-blue dark:text-cyan-blue mb-4"
+            >
+              Contact Section
+            </h2>
+            <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+              <p>Contact component will be rendered here</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>

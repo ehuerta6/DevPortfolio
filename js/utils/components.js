@@ -127,10 +127,15 @@ class Section extends Component {
   render() {
     const content = this.getContent();
 
+    // Only add title if it's provided
+    const titleHtml = this.title
+      ? `<h2 class="section-title">${this.title}</h2>`
+      : '';
+
     this.container.innerHTML = `
       <section id="${this.sectionId}" class="section">
         <div class="container">
-          <h2 class="section-title">${this.title}</h2>
+          ${titleHtml}
           <div class="section-content">
             ${content}
           </div>
