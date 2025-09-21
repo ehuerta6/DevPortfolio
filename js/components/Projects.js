@@ -85,37 +85,37 @@ class Projects extends Section {
   getContent() {
     return `
       <!-- Filter Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-200 ${this.activeFilter === 'all' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4 sm:px-0">
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full font-medium transition-all duration-200 text-sm sm:text-base ${this.activeFilter === 'all' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
                 data-filter="all">
           Todos
         </button>
-        <button class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-200 ${this.activeFilter === 'web' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full font-medium transition-all duration-200 text-sm sm:text-base ${this.activeFilter === 'web' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
                 data-filter="web">
           Web
         </button>
-        <button class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-200 ${this.activeFilter === 'mobile' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full font-medium transition-all duration-200 text-sm sm:text-base ${this.activeFilter === 'mobile' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
                 data-filter="mobile">
           Móvil
         </button>
-        <button class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-200 ${this.activeFilter === 'ai' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
+        <button class="filter-btn px-4 sm:px-6 py-2 rounded-full font-medium transition-all duration-200 text-sm sm:text-base ${this.activeFilter === 'ai' ? 'bg-navy-blue text-white dark:bg-cyan-blue' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'}" 
                 data-filter="ai">
           IA
         </button>
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0" id="projects-grid">
         ${this.renderProjects()}
       </div>
 
       <!-- Project Modal -->
-      <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-slate-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-          <div class="p-6">
+      <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-2 sm:p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-lg max-w-2xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
+          <div class="p-4 sm:p-6">
             <div class="flex justify-between items-start mb-4">
-              <h3 id="modal-title" class="text-2xl font-bold text-navy-blue dark:text-cyan-blue"></h3>
-              <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-slate-400 dark:hover:text-slate-200">
+              <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-navy-blue dark:text-cyan-blue pr-4"></h3>
+              <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-slate-400 dark:hover:text-slate-200 p-2 -m-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>

@@ -28,7 +28,7 @@ class Home extends Section {
                 <div class="relative">
                   <img src="assets/images/profile/headshot.jpg" 
                        alt="${CONFIG.personal.name}" 
-                       class="w-72 h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-gray-200 dark:border-slate-700 hover:border-navy-blue dark:hover:border-cyan-blue transition-all duration-300 hover:scale-105 mx-auto lg:mx-0 hero-image">
+                       class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-gray-200 dark:border-slate-700 hover:border-navy-blue dark:hover:border-cyan-blue transition-all duration-300 hover:scale-105 mx-auto lg:mx-0 hero-image">
                   <!-- Floating decorative elements -->
                   <div class="absolute -top-4 -right-4 w-24 h-24 bg-cyan-blue rounded-full opacity-20 animate-pulse-custom"></div>
                   <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-navy-blue rounded-full opacity-20 animate-pulse-custom" style="animation-delay: 1s;"></div>
@@ -47,19 +47,19 @@ class Home extends Section {
             <!-- Hero Text -->
             <div class="order-1 lg:order-2 text-center lg:text-left animate-on-scroll">
               <div class="animate-stagger">
-                <h1 class="text-5xl lg:text-6xl font-bold text-navy-blue dark:text-cyan-blue mb-4 gradient-text">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-blue dark:text-cyan-blue mb-4 gradient-text">
                   ${CONFIG.personal.name}
                 </h1>
               </div>
               
               <div class="animate-stagger">
-                <p class="text-xl lg:text-2xl text-gray-600 dark:text-slate-400 font-medium mb-6">
+                <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-slate-400 font-medium mb-6">
                   ${CONFIG.personal.title}
                 </p>
               </div>
               
               <div class="animate-stagger">
-                <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
+                <p class="text-base sm:text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
                   ${CONFIG.personal.bio}
                 </p>
               </div>
@@ -84,7 +84,7 @@ class Home extends Section {
               </div>
 
               <!-- Social Links -->
-              <div class="flex justify-center lg:justify-start space-x-6 mt-8 animate-stagger">
+              <div class="flex justify-center lg:justify-start space-x-4 sm:space-x-6 mt-8 animate-stagger">
                 <a href="${CONFIG.personal.github}" 
                    target="_blank" 
                    class="text-gray-600 dark:text-slate-400 hover:text-navy-blue dark:hover:text-cyan-blue transition-colors duration-200 hover-scale focus-ring p-2 rounded-full">

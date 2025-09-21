@@ -11,6 +11,7 @@ const CONFIG = {
     { id: 'experience', name: 'Experiencia', icon: 'briefcase' },
     { id: 'leadership', name: 'Liderazgo', icon: 'star' },
     { id: 'education', name: 'Educación', icon: 'graduation' },
+    { id: 'contact', name: 'Contacto', icon: 'mail' },
   ],
 
   // Theme configuration

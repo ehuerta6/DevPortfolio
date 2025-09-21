@@ -48,22 +48,25 @@ class Header extends Component {
           </button>
 
           <!-- Mobile Menu Toggle -->
-          <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-gray-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-gray-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-blue focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
       </nav>
 
       <!-- Mobile Navigation -->
-      <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
-        <div class="px-6 py-4 space-y-2">
+      <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700 shadow-lg">
+        <div class="px-4 py-4 space-y-1">
           ${CONFIG.sections
             .map(
               (section) => `
             <a href="#${section.id}" 
-               class="mobile-nav-link block text-gray-700 dark:text-slate-300 hover:text-navy-blue dark:hover:text-cyan-blue font-medium px-4 py-2 rounded-lg transition-colors duration-200">
+               class="mobile-nav-link block text-gray-700 dark:text-slate-300 hover:text-navy-blue dark:hover:text-cyan-blue font-medium px-4 py-3 rounded-lg transition-all duration-200 hover:bg-gray-50 dark:hover:bg-slate-800">
               ${section.name}
             </a>
           `
@@ -88,10 +91,22 @@ class Header extends Component {
       '#mobile-menu-toggle'
     );
     const mobileMenu = this.container.querySelector('#mobile-menu');
+    const menuIcon = this.container.querySelector('#menu-icon');
+    const closeIcon = this.container.querySelector('#close-icon');
 
     if (mobileMenuToggle && mobileMenu) {
       mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        const isHidden = mobileMenu.classList.contains('hidden');
+        
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
       });
     }
 
@@ -106,8 +121,12 @@ class Header extends Component {
         this.scrollToSection(targetId);
 
         // Close mobile menu if open
-        if (mobileMenu) {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
+          if (menuIcon && closeIcon) {
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
         }
       });
     });

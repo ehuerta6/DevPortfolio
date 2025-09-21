@@ -34,6 +34,8 @@ const App = {
     this.components.navigation = new Navigation();
     this.components.animations = new AnimationController();
     this.components.lazyLoading = new LazyLoading();
+    this.components.mobileResponsive = new MobileResponsive();
+    this.components.performanceMonitoring = new PerformanceMonitoring();
 
     // Initialize main components
     this.components.header = new Header('header');
@@ -43,6 +45,7 @@ const App = {
     this.components.experience = new Experience('main');
     this.components.leadership = new Leadership('main');
     this.components.education = new Education('main');
+    this.components.contact = new Contact('main');
   },
 
   /**
