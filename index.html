@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio web personal profesional - Desarrollador Full Stack"
+    />
+    <meta
+      name="keywords"
+      content="portafolio, desarrollador, web, JavaScript, full stack"
+    />
+    <meta name="author" content="Emiliano Huerta" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Emiliano Huerta - Portafolio Web" />
+    <meta
+      property="og:description"
+      content="Portafolio web personal profesional"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Emiliano Huerta - Portafolio Web" />
+    <meta
+      property="twitter:description"
+      content="Portafolio web personal profesional"
+    />
+
+    <title>Emiliano Huerta - Portafolio Web</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'navy-blue': '#1e3a8a',
+              'cyan-blue': '#06b6d4',
+            },
+            fontFamily: {
+              inter: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            spacing: {
+              18: '4.5rem',
+              88: '22rem',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS for specific components -->
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+  </head>
+  <body
+    class="font-inter bg-white text-gray-900 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <!-- Header Navigation -->
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 h-20 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-all duration-300 dark:bg-slate-900/95 dark:border-slate-700"
+    ></header>
+
+    <!-- Main Content -->
+    <main id="main" class="pt-20 min-h-screen"></main>
+
+    <!-- Footer -->
+    <footer
+      id="footer"
+      class="bg-gray-50 border-t border-gray-200 py-8 dark:bg-slate-800 dark:border-slate-700"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-center text-gray-600 dark:text-gray-400">
+          &copy; 2024 Emiliano Huerta. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/config/constants.js"></script>
+    <script src="js/utils/components.js"></script>
+    <script src="js/utils/darkMode.js"></script>
+    <script src="js/utils/navigation.js"></script>
+    <script src="js/components/Header.js"></script>
+    <script src="js/components/Home.js"></script>
+    <script src="js/components/About.js"></script>
+    <script src="js/components/Projects.js"></script>
+    <script src="js/components/Experience.js"></script>
+    <script src="js/components/Leadership.js"></script>
+    <script src="js/components/Education.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
