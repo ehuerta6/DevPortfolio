@@ -141,4 +141,7 @@ class Navigation {
   }
 
   // Public method to be called by App
-  updateActive
+  updateActiveSection() {
+    this.updateActiveSection();
+  }
+}

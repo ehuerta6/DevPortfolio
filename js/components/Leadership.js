@@ -18,7 +18,9 @@ class Leadership extends Section {
             Roles de Liderazgo
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            ${this.getLeadershipRoles().map(role => `
+            ${this.getLeadershipRoles()
+              .map(
+                (role) => `
               <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-start mb-4">
                   <div class="flex-shrink-0 w-12 h-12 bg-navy-blue dark:bg-cyan-blue rounded-lg flex items-center justify-center mr-4">
@@ -41,18 +43,28 @@ class Leadership extends Section {
                 <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
                   ${role.description}
                 </p>
-                ${role.achievements && role.achievements.length > 0 ? `
+                ${
+                  role.achievements && role.achievements.length > 0
+                    ? `
                   <ul class="mt-3 space-y-1">
-                    ${role.achievements.map(achievement => `
+                    ${role.achievements
+                      .map(
+                        (achievement) => `
                       <li class="flex items-start text-sm text-gray-600 dark:text-slate-400">
                         <span class="text-cyan-blue dark:text-navy-blue mr-2 mt-0.5">•</span>
                         <span>${achievement}</span>
                       </li>
-                    `).join('')}
+                    `
+                      )
+                      .join('')}
                   </ul>
-                ` : ''}
+                `
+                    : ''
+                }
               </div>
-            `).join('')}
+            `
+              )
+              .join('')}
           </div>
         </div>
 
@@ -62,7 +74,9 @@ class Leadership extends Section {
             Reconocimientos y Premios
           </h3>
           <div class="space-y-6">
-            ${this.getAwards().map(award => `
+            ${this.getAwards()
+              .map(
+                (award) => `
               <div class="bg-gradient-to-r from-navy-blue to-cyan-blue dark:from-cyan-blue dark:to-navy-blue rounded-lg p-6 text-white">
                 <div class="flex items-start justify-between">
                   <div class="flex-1">
@@ -86,7 +100,9 @@ class Leadership extends Section {
                   ${award.description}
                 </p>
               </div>
-            `).join('')}
+            `
+              )
+              .join('')}
           </div>
         </div>
 
@@ -96,7 +112,9 @@ class Leadership extends Section {
             Certificaciones
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            ${this.getCertifications().map(cert => `
+            ${this.getCertifications()
+              .map(
+                (cert) => `
               <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
                   <div class="w-12 h-12 bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center mr-4">
@@ -118,11 +136,17 @@ class Leadership extends Section {
                 </p>
                 <div class="flex items-center justify-between text-xs text-gray-500 dark:text-slate-500">
                   <span>${cert.date}</span>
-                  ${cert.credentialId ? `
+                  ${
+                    cert.credentialId
+                      ? `
                     <span class="font-mono">ID: ${cert.credentialId}</span>
-                  ` : ''}
+                  `
+                      : ''
+                  }
                 </div>
-                ${cert.verifyUrl ? `
+                ${
+                  cert.verifyUrl
+                    ? `
                   <a href="${cert.verifyUrl}" 
                      target="_blank" 
                      class="inline-flex items-center mt-3 text-navy-blue dark:text-cyan-blue hover:text-cyan-blue dark:hover:text-navy-blue text-sm font-medium transition-colors duration-200">
@@ -131,9 +155,13 @@ class Leadership extends Section {
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
                   </a>
-                ` : ''}
+                `
+                    : ''
+                }
               </div>
-            `).join('')}
+            `
+              )
+              .join('')}
           </div>
         </div>
       </div>
@@ -146,46 +174,50 @@ class Leadership extends Section {
         title: 'Tech Lead',
         organization: 'TechCorp Solutions',
         period: '2022 - Presente',
-        description: 'Lidero un equipo de 8 desarrolladores en la creación de productos innovadores. Establezco estándares técnicos y guío las decisiones arquitectónicas.',
+        description:
+          'Lidero un equipo de 8 desarrolladores en la creación de productos innovadores. Establezco estándares técnicos y guío las decisiones arquitectónicas.',
         achievements: [
           'Implementé metodologías ágiles que aumentaron la productividad del equipo en un 35%',
           'Mentoré a 5 desarrolladores junior, 3 de los cuales fueron promovidos',
-          'Establecí un proceso de code review que redujo bugs en producción en un 60%'
-        ]
+          'Establecí un proceso de code review que redujo bugs en producción en un 60%',
+        ],
       },
       {
         title: 'Mentor de Bootcamp',
         organization: 'CodeAcademy México',
         period: '2021 - Presente',
-        description: 'Mentor de estudiantes en bootcamps de programación, ayudándoles a desarrollar habilidades técnicas y de resolución de problemas.',
+        description:
+          'Mentor de estudiantes en bootcamps de programación, ayudándoles a desarrollar habilidades técnicas y de resolución de problemas.',
         achievements: [
           'Mentoré a más de 50 estudiantes con una tasa de empleo del 85%',
           'Creé material educativo que es utilizado por 200+ estudiantes',
-          'Desarrollé un programa de seguimiento post-graduación'
-        ]
+          'Desarrollé un programa de seguimiento post-graduación',
+        ],
       },
       {
         title: 'Organizador de Meetup',
         organization: 'JavaScript México',
         period: '2020 - 2022',
-        description: 'Organizador de eventos mensuales de la comunidad JavaScript, coordinando speakers y facilitando networking entre desarrolladores.',
+        description:
+          'Organizador de eventos mensuales de la comunidad JavaScript, coordinando speakers y facilitando networking entre desarrolladores.',
         achievements: [
           'Organizé 24 eventos con más de 1,200 asistentes en total',
           'Establecí partnerships con 10 empresas tecnológicas',
-          'Creé una red de más de 500 desarrolladores'
-        ]
+          'Creé una red de más de 500 desarrolladores',
+        ],
       },
       {
         title: 'Contribuidor Open Source',
         organization: 'Proyectos Open Source',
         period: '2019 - Presente',
-        description: 'Contribuyo activamente a proyectos open source, especialmente en el ecosistema JavaScript y herramientas de desarrollo.',
+        description:
+          'Contribuyo activamente a proyectos open source, especialmente en el ecosistema JavaScript y herramientas de desarrollo.',
         achievements: [
           'Más de 500 contribuciones a proyectos populares',
           'Mantenedor de 3 librerías con más de 1,000 stars en GitHub',
-          'Ayudé a resolver más de 200 issues de la comunidad'
-        ]
-      }
+          'Ayudé a resolver más de 200 issues de la comunidad',
+        ],
+      },
     ];
   }
 
@@ -195,20 +227,23 @@ class Leadership extends Section {
         title: 'Desarrollador del Año',
         organization: 'TechCorp Solutions',
         date: 'Diciembre 2023',
-        description: 'Reconocido por liderazgo excepcional, innovación técnica y contribución al éxito del equipo.'
+        description:
+          'Reconocido por liderazgo excepcional, innovación técnica y contribución al éxito del equipo.',
       },
       {
         title: 'Mejor Proyecto Open Source',
         organization: 'JavaScript México',
         date: 'Octubre 2022',
-        description: 'Premio por la librería de componentes React que desarrollé y mantengo activamente.'
+        description:
+          'Premio por la librería de componentes React que desarrollé y mantengo activamente.',
       },
       {
         title: 'Speaker Destacado',
         organization: 'DevConf México',
         date: 'Septiembre 2021',
-        description: 'Reconocimiento por la presentación sobre "Arquitecturas Escalables en JavaScript" con 500+ asistentes.'
-      }
+        description:
+          'Reconocimiento por la presentación sobre "Arquitecturas Escalables en JavaScript" con 500+ asistentes.',
+      },
     ];
   }
 
@@ -218,50 +253,56 @@ class Leadership extends Section {
         name: 'AWS Solutions Architect',
         issuer: 'Amazon Web Services',
         date: 'Enero 2023',
-        description: 'Certificación en diseño de arquitecturas escalables y seguras en AWS.',
+        description:
+          'Certificación en diseño de arquitecturas escalables y seguras en AWS.',
         credentialId: 'AWS-SAA-123456',
-        verifyUrl: 'https://aws.amazon.com/verification'
+        verifyUrl: 'https://aws.amazon.com/verification',
       },
       {
         name: 'Google Cloud Professional Developer',
         issuer: 'Google Cloud',
         date: 'Noviembre 2022',
-        description: 'Certificación en desarrollo de aplicaciones en Google Cloud Platform.',
+        description:
+          'Certificación en desarrollo de aplicaciones en Google Cloud Platform.',
         credentialId: 'GCP-PD-789012',
-        verifyUrl: 'https://cloud.google.com/certification'
+        verifyUrl: 'https://cloud.google.com/certification',
       },
       {
         name: 'Certified Scrum Master',
         issuer: 'Scrum Alliance',
         date: 'Agosto 2022',
-        description: 'Certificación en metodologías ágiles y liderazgo de equipos Scrum.',
+        description:
+          'Certificación en metodologías ágiles y liderazgo de equipos Scrum.',
         credentialId: 'CSM-345678',
-        verifyUrl: 'https://scrumalliance.org'
+        verifyUrl: 'https://scrumalliance.org',
       },
       {
         name: 'React Developer Certification',
         issuer: 'Meta (Facebook)',
         date: 'Junio 2022',
-        description: 'Certificación oficial en desarrollo con React y ecosistema relacionado.',
+        description:
+          'Certificación oficial en desarrollo con React y ecosistema relacionado.',
         credentialId: 'META-REACT-901234',
-        verifyUrl: 'https://coursera.org'
+        verifyUrl: 'https://coursera.org',
       },
       {
         name: 'Node.js Application Developer',
         issuer: 'OpenJS Foundation',
         date: 'Marzo 2022',
-        description: 'Certificación en desarrollo de aplicaciones backend con Node.js.',
+        description:
+          'Certificación en desarrollo de aplicaciones backend con Node.js.',
         credentialId: 'NODE-AD-567890',
-        verifyUrl: 'https://openjsf.org'
+        verifyUrl: 'https://openjsf.org',
       },
       {
         name: 'Docker Certified Associate',
         issuer: 'Docker Inc.',
         date: 'Enero 2022',
-        description: 'Certificación en containerización y orquestación con Docker.',
+        description:
+          'Certificación en containerización y orquestación con Docker.',
         credentialId: 'DCA-123789',
-        verifyUrl: 'https://docker.com'
-      }
+        verifyUrl: 'https://docker.com',
+      },
     ];
   }
 }
