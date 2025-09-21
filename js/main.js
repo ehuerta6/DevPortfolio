@@ -32,6 +32,8 @@ const App = {
     // Initialize utility components first
     this.components.darkMode = new DarkMode();
     this.components.navigation = new Navigation();
+    this.components.animations = new AnimationController();
+    this.components.lazyLoading = new LazyLoading();
 
     // Initialize main components
     this.components.header = new Header('header');

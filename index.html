@@ -3,33 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Emiliano Huerta - Full Stack Developer & Tech Lead | Portfolio
+    </title>
     <meta
       name="description"
-      content="Portafolio web personal profesional - Desarrollador Full Stack"
+      content="Portfolio personal de Emiliano Huerta, Full Stack Developer y Tech Lead especializado en JavaScript, React, Node.js y metodologías ágiles. Descubre mis proyectos y experiencia profesional."
     />
     <meta
       name="keywords"
-      content="portafolio, desarrollador, web, JavaScript, full stack"
+      content="desarrollador full stack, tech lead, portfolio, web development, JavaScript, React, Node.js, agile, liderazgo técnico, Emiliano Huerta"
     />
     <meta name="author" content="Emiliano Huerta" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#1e3a8a" />
+    <meta name="msapplication-TileColor" content="#1e3a8a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Emiliano Huerta" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://emiliano-huerta.dev/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Emiliano Huerta - Portafolio Web" />
+    <meta property="og:url" content="https://emiliano-huerta.dev/" />
+    <meta
+      property="og:title"
+      content="Emiliano Huerta - Full Stack Developer & Tech Lead"
+    />
     <meta
       property="og:description"
-      content="Portafolio web personal profesional"
+      content="Portfolio personal de Emiliano Huerta, Full Stack Developer y Tech Lead especializado en tecnologías web modernas y metodologías ágiles."
     />
+    <meta
+      property="og:image"
+      content="https://emiliano-huerta.dev/assets/images/profile/headshot.jpg"
+    />
+    <meta property="og:site_name" content="Emiliano Huerta Portfolio" />
+    <meta property="og:locale" content="es_ES" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Emiliano Huerta - Portafolio Web" />
+    <meta property="twitter:url" content="https://emiliano-huerta.dev/" />
+    <meta
+      property="twitter:title"
+      content="Emiliano Huerta - Full Stack Developer & Tech Lead"
+    />
     <meta
       property="twitter:description"
-      content="Portafolio web personal profesional"
+      content="Portfolio personal de Emiliano Huerta, Full Stack Developer y Tech Lead especializado en tecnologías web modernas."
     />
-
-    <title>Emiliano Huerta - Portafolio Web</title>
+    <meta
+      property="twitter:image"
+      content="https://emiliano-huerta.dev/assets/images/profile/headshot.jpg"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,6 +92,41 @@
 
     <!-- Custom CSS for specific components -->
     <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emiliano Huerta",
+        "jobTitle": "Full Stack Developer & Tech Lead",
+        "description": "Full Stack Developer y Tech Lead especializado en JavaScript, React, Node.js y metodologías ágiles",
+        "url": "https://emiliano-huerta.dev",
+        "image": "https://emiliano-huerta.dev/assets/images/profile/headshot.jpg",
+        "sameAs": [
+          "https://linkedin.com/in/emiliano-huerta",
+          "https://github.com/emiliano-huerta",
+          "https://twitter.com/emiliano_huerta"
+        ],
+        "knowsAbout": [
+          "JavaScript",
+          "React",
+          "Node.js",
+          "Full Stack Development",
+          "Tech Leadership",
+          "Agile Methodologies",
+          "Web Development"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Universidad Tecnológica"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Tech Company"
+        }
+      }
+    </script>
 
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,6 +168,8 @@
     <script src="js/utils/components.js"></script>
     <script src="js/utils/darkMode.js"></script>
     <script src="js/utils/navigation.js"></script>
+    <script src="js/utils/animations.js"></script>
+    <script src="js/utils/lazyLoading.js"></script>
     <script src="js/components/Header.js"></script>
     <script src="js/components/Home.js"></script>
     <script src="js/components/About.js"></script>
